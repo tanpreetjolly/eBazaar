@@ -1,0 +1,8 @@
+#root{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  flex-grow: 1;
+  max-width: 100vw;
+}
+
