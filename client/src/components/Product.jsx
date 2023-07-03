@@ -15,11 +15,11 @@ const Product = () => {
   }, [location]);
 
   return (
-    <div className="mt-24">
-      <div className="max-w-screen-xl mx-auto my-10 flex gap-10">
-        <div className="w-2/5 relative">
+    <div className="mt-24 min-h-[70vh]">
+      <div className="max-w-screen-xl mx-auto my-10 flex flex-col items-center sm:flex-row gap-10 px-2">
+        <div className="w-3/5 md:w-2/5 relative">
           <img
-            className="w-full h-[550px] object-cover"
+            className="w-full h-[350px] lg:h-[550px] object-cover"
             src={details.image}
             alt="productImg"
           />
@@ -31,14 +31,14 @@ const Product = () => {
             )}
           </div>
         </div>
-        <div className="w-3/5 flex flex-col justify-center gap-12">
+        <div className="w-5/6 md:w-3/5 flex flex-col justify-center gap-12">
           <div>
-            <h2 className="text-4xl font-semibold">{details.title}</h2>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold">{details.title}</h2>
             <div className="flex items-center gap-4 mt-3">
-              <p className="line-through font-base text-gray-500">
+              <p className="line-through text-sm md:text-base text-gray-500">
                 ${details.oldPrice}
               </p>
-              <p className="text-2xl font-medium text-gray-900">
+              <p className="text-lg lg:text-2xl font-medium text-gray-900">
                 ${details.price}
               </p>
             </div>
@@ -53,9 +53,9 @@ const Product = () => {
             </div>
             <p className="text-xs text-gray-500">(1 Customer review)</p>
           </div>
-          <p className="text-base text-gray-500 -mt-3">{details.description}</p>
+          <p className="text-sm md:text-base text-gray-500 -mt-3">{details.description}</p>
           <div className="flex gap-4">
-            <div className="w-52 flex items-center justify-between text-gray-500 gap-4 border p-3">
+            <div className="md:w-52 flex items-center justify-between text-gray-500 gap-4 border p-3">
               <p className="text-sm">Quantity</p>
               <div className="flex items-center gap-4 text-sm font-semibold">
                 <button
@@ -88,14 +88,14 @@ const Product = () => {
                   })
                 ) & toast.success(`${details.title} is added`)
               }
-              className="bg-black text-white py-3 px-6 active:bg-gray-800"
+              className="bg-black text-sm md:text-base text-white md:py-3 px-2 md:px-6 active:bg-gray-800"
             >
               add to cart
             </button>
           </div>
-          <p className="text-base text-gray-500">
+          <p className="text-sm md:text-base text-gray-500">
             Category:{" "}
-            <span className="font-medium capitalize">{details.category}</span>
+            <span className="font-medium  capitalize">{details.category}</span>
           </p>
         </div>
       </div>

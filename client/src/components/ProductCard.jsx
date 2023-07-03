@@ -27,12 +27,12 @@ const ProductCard = ({ product }) => {
     <div className="group relative">
       <figure
         onClick={handleDetails}
-        className="w-full h-96 hover:cursor-pointer overflow-hidden "
+        className="w-60 sm:w-72 lg:w-full h-96 hover:cursor-pointer overflow-hidden "
       >
         <img
           src={product.image}
           alt="productImg"
-          className="w-full h-full object-cover group-hover:scale-110 duration-500"
+          className="lg:w-full h-full object-cover group-hover:scale-110 duration-500"
         />
       </figure>
       <div className="info border px-2 py-4 w-full flex flex-col gap-0.5">

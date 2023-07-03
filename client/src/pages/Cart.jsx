@@ -33,12 +33,12 @@ const Cart = () => {
     }
   };
   return (
-    <div className="mt-24 flex flex-col items-center min-h-screen">
-      <div className="flex gap-3  max-w-screen-xl p-4 my-1">
-        <div className="w-2/3">
+    <div className="mt-24 flex flex-col items-center min-h-screen px-1">
+      <div className="flex gap-3 flex-wrap sm:flex-nowrap justify-center sm:justify-start max-w-screen-xl p-4 my-1">
+        <div className="w-5/6 sm:w-1/2  md:w-2/3">
           <CartItem />
         </div>
-        <div className="w-1/3 flex flex-col gap-3 items-center text-gray-800  pt-3">
+        <div className="w-5/6 sm:w-1/2 pl-5 md:pl-0 md:w-1/3 text-sm lg:text-base flex flex-col gap-3 items-center text-gray-800  pt-3">
           <h2 className="w-full font-titleFont font-semibold  text-gray-900 text-2xl mb-3">
             Cart Total
           </h2>

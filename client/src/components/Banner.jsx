@@ -22,7 +22,7 @@ const Banner = () => {
 
   return (
     <div className="w-full h-auto overflow-x-hidden mt-24 ">
-      <div className="w-screen h-[650px] relative">
+      <div className="w-screen h-[255px] xs:h-[300px] sm:h-[400px] md:h-[500px] lg:h-[650px] relative">
         <div
           style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
           className="w-[400vw] flex h-full transition-transform duration-700"
@@ -55,13 +55,13 @@ const Banner = () => {
         <div className="bttns-container flex justify-center gap-2 w-full top-[80%] absolute">
           <div>
             <AiOutlineDoubleLeft
-              className=" h-10 w-10 shadow-md p-1 rounded-md opacity-70 hover:cursor-pointer hover:bg-gray-700 duration-200 hover:text-white"
+              className="h-6 w-6 lg:h-10 lg:w-10 shadow-md p-1 rounded-md opacity-70 hover:cursor-pointer hover:bg-gray-700 duration-200 hover:text-white"
               onClick={prevSlide}
             />
           </div>
           <div>
             <AiOutlineDoubleRight
-              className="h-10 w-10 shadow-md p-1 rounded-md opacity-70 hover:cursor-pointer hover:bg-gray-700 duration-200 hover:text-white"
+              className="h-6 w-6 lg:h-10 lg:w-10 shadow-md p-1 rounded-md opacity-70 hover:cursor-pointer hover:bg-gray-700 duration-200 hover:text-white"
               onClick={nextSlide}
             />
           </div>
