@@ -49,7 +49,7 @@ const Login = () => {
   };
   return (
     <div className="min-h-[80vh]  pt-24">
-      <section className="flex justify-center m-1 py-16 gap-10 items-center">
+      <section className="flex flex-col md:flex-row justify-center m-1 py-16 gap-10 items-center">
         <figure className="w-[25rem]">
           <img
             src="https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
