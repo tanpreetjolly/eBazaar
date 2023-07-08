@@ -6,7 +6,11 @@ require("dotenv").config();
 const port = process.env.PORT;
 const Stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://eBazaar-api-backend.onrender.com"],
+  })
+);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
