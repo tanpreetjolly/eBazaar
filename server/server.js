@@ -10,7 +10,7 @@ const Stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 app.use(
   cors({
-    origin: ["https://ebazaar-store.onrender.com/"],
+    origin: ["https://ebazaar-store.onrender.com"],
   })
 );
 app.use(bodyParser.json());
@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, "..", "client", "dist")));
 
-app.get("/*", (req, res) => {
+app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "client", "dist", "index.html"));
 });
 
