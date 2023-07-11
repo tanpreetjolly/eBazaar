@@ -14,18 +14,12 @@ app.use(
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("^/$|/index(.html)?", (req, res) => {
-  //res.sendFile('./views/index.html', { root: __dirname });
-  res.sendFile(path.join(__dirname, "..", "client", "src", "Home.jsx"));
+app.use(express.static('../client/dist'));
+
+app.get('*', (req, res) => {
+	res.sendFile(path.join(__dirname, '../client/dist/', 'index.html'));
 });
-app.get("^/$|/cart(.html)?", (req, res) => {
-  //res.sendFile('./views/index.html', { root: __dirname });
-  res.sendFile(path.join(__dirname, "..", "client", "src", "Cart.jsx"));
-});
-app.get("^/$|/index(.html)?", (req, res) => {
-  //res.sendFile('./views/index.html', { root: __dirname });
-  res.sendFile(path.join(__dirname, "..", "client", "src", "Login.jsx"));
-});
+
 
 app.post("/pay", async (req, res) => {
   console.log(req.body.token);
