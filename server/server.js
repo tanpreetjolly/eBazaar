@@ -13,8 +13,10 @@ app.use(
 );
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.get("/", (req, res) => {
-  res.send("Hello World!");
+
+app.get("^/$|/index(.html)?", (req, res) => {
+  //res.sendFile('./views/index.html', { root: __dirname });
+  res.sendFile(path.join(__dirname, "..", "client", "index.html"));
 });
 
 app.post("/pay", async (req, res) => {
