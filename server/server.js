@@ -10,7 +10,7 @@ const Stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 app.use(
   cors({
-    origin: ["https://eBazaar-api-backend.onrender.com"],
+    origin: ["https://eBazaar-store.onrender.com"],
   })  
 );
 app.use(bodyParser.json());
