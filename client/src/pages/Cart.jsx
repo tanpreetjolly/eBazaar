@@ -19,7 +19,7 @@ const Cart = () => {
   }, [productData]);
 
   const payment = async (token) => {
-    await axios.post("https://eBazaar-api-backend/pay", {
+    await axios.post("https://ebazardeploy.onrender.com/pay", {
       amount: totalAmt * 100,
       token: token,
     });
