@@ -19,7 +19,7 @@ const Login = () => {
     try {
       // Use Axios, Fetch, or any HTTP library to send a POST request to your API
       // For example, using Axios:
-      const response = await axios.post("http://localhost:3000/login", {
+      const response = await axios.post("/login", {
         displayName,
         email,
       });
