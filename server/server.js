@@ -18,7 +18,7 @@ app.use(
 );
 =======
 // Middleware
-const allowedOrigins = ["http://localhost:5173"];
+const allowedOrigins = ["http://localhost:5173, https://ebazardeploy.onrender.com/"];
 
 const corsOptions = {
   origin: (origin, callback) => {
