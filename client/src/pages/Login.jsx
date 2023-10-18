@@ -15,6 +15,19 @@ const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const userInfo = useSelector((state) => state.bazar.userInfo);
+  const sendUserDataToBackend = async (displayName, email) => {
+    try {
+      // Use Axios, Fetch, or any HTTP library to send a POST request to your API
+      // For example, using Axios:
+      const response = await axios.post("http://localhost:3000/login", {
+        displayName,
+        email,
+      });
+      console.log(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   const handleGoogleLogin = (e) => {
     e.preventDefault();
