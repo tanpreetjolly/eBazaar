@@ -5,7 +5,6 @@ const path = require("path");
 const dotenv = require("dotenv");
 dotenv.config();
 
-<<<<<<< HEAD
 const bodyParser = require("body-parser");
 require("dotenv").config();
 const port = process.env.PORT;
@@ -16,32 +15,13 @@ app.use(
     origin: ["https://ebazardeploy.onrender.com"],
   })
 );
-=======
-// Middleware
-// const allowedOrigins = ["http://localhost:5173, https://ebazardeploy.onrender.com"];
 
-// const corsOptions = {
-//   origin: (origin, callback) => {
-//     if (allowedOrigins.includes(origin) || !origin) {
-//       callback(null, true);
-//     } else {
-//       callback(new Error("Not allowed by CORS"));
-//     }
-//   },
-//   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-//   optionsSuccessStatus: 204,
-//   credentials: true, // Allow credentials like cookies
-// };
-// app.use(cors(corsOptions)); //for dev
-app.use(cors());
 
->>>>>>> 96930d6 (server.js changes)
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, "..", "client", "dist")));
 
-<<<<<<< HEAD
 app.get('/*', (req, res) => {
 	res.sendFile(path.join(__dirname, '../client/dist/index.html'), (err) => {
 		if (err) {
