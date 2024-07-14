@@ -12,7 +12,7 @@ const Stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 app.use(
   cors({
-    origin: ["https://ebazardeploy.onrender.com"],
+    origin: ["https://ebazaar-lf8z.onrender.com"],
   })
 );
 
